@@ -69,12 +69,16 @@
 </head>
 <body>
     <div class="container">
-        <h1>Word Ladder</h1>
-        <input type="text" id="startWord" placeholder="Enter the first word">
-        <input type="text" id="finalWord" placeholder="Enter the final word">
-        <button id="solveBtn">Solve</button>
-        <ul id="resultList"></ul>
+      <h1>Word Ladder</h1>
+      <p>
+        Enter two valid english words with the same length.
+      </p>
+      <input type="text" id="startWord" placeholder="Enter the first word">
+      <input type="text" id="finalWord" placeholder="Enter the final word">
+      <button id="solveBtn">Solve</button>
+      <ul id="resultList"></ul>
     </div>
+
 
     <script>
         async function fetchJson(wordLength) {
