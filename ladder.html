@@ -97,6 +97,9 @@
         }
 
         async function makeLadder(w1, w2) {
+
+          if (w1.length != w2.length) return;
+
           const wordLength = w1.length;
           const neighbors = await loadNeighbors(wordLength);
           const seen = new Set();
@@ -118,8 +121,7 @@
               potentials.push([neighbor, [...trace, neighbor]]);
             }
           }
-
-          return 'No solution found';
+          return;
         }
 
         document.getElementById('solveBtn').addEventListener('click', async () => {
@@ -139,11 +141,10 @@
             });
           } else {
             const listItem = document.createElement('li');
-            listItem.textContent = result;
+            listItem.textContent = 'No solution found';
             resultList.appendChild(listItem);
           }
         });
-
 
     </script>
 </body>
