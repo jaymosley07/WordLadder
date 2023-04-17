@@ -1,0 +1,266 @@
+{
+  "ad": [
+    "ah",
+    "am",
+    "an",
+    "as",
+    "at",
+    "ax"
+  ],
+  "ah": [
+    "ad",
+    "am",
+    "an",
+    "as",
+    "at",
+    "ax",
+    "oh"
+  ],
+  "am": [
+    "ad",
+    "ah",
+    "an",
+    "as",
+    "at",
+    "ax",
+    "em"
+  ],
+  "an": [
+    "ad",
+    "ah",
+    "am",
+    "as",
+    "at",
+    "ax",
+    "en",
+    "in",
+    "on"
+  ],
+  "as": [
+    "ad",
+    "ah",
+    "am",
+    "an",
+    "at",
+    "ax",
+    "is",
+    "us"
+  ],
+  "at": [
+    "ad",
+    "ah",
+    "am",
+    "an",
+    "as",
+    "ax",
+    "et",
+    "it"
+  ],
+  "ax": [
+    "ad",
+    "ah",
+    "am",
+    "an",
+    "as",
+    "at",
+    "ex",
+    "ox"
+  ],
+  "be": [
+    "by",
+    "he",
+    "me",
+    "re",
+    "we"
+  ],
+  "by": [
+    "be",
+    "my"
+  ],
+  "do": [
+    "go",
+    "no",
+    "so",
+    "to"
+  ],
+  "em": [
+    "am",
+    "en",
+    "et",
+    "ex"
+  ],
+  "en": [
+    "an",
+    "em",
+    "et",
+    "ex",
+    "in",
+    "on"
+  ],
+  "et": [
+    "at",
+    "em",
+    "en",
+    "ex",
+    "it"
+  ],
+  "ex": [
+    "ax",
+    "em",
+    "en",
+    "et",
+    "ox"
+  ],
+  "go": [
+    "do",
+    "no",
+    "so",
+    "to"
+  ],
+  "ha": [
+    "he",
+    "hi"
+  ],
+  "he": [
+    "be",
+    "ha",
+    "hi",
+    "me",
+    "re",
+    "we"
+  ],
+  "hi": [
+    "ha",
+    "he",
+    "pi"
+  ],
+  "if": [
+    "in",
+    "is",
+    "it",
+    "of"
+  ],
+  "in": [
+    "an",
+    "en",
+    "if",
+    "is",
+    "it",
+    "on"
+  ],
+  "is": [
+    "as",
+    "if",
+    "in",
+    "it",
+    "us"
+  ],
+  "it": [
+    "at",
+    "et",
+    "if",
+    "in",
+    "is"
+  ],
+  "me": [
+    "be",
+    "he",
+    "mu",
+    "my",
+    "re",
+    "we"
+  ],
+  "mu": [
+    "me",
+    "my",
+    "nu"
+  ],
+  "my": [
+    "by",
+    "me",
+    "mu"
+  ],
+  "no": [
+    "do",
+    "go",
+    "nu",
+    "so",
+    "to"
+  ],
+  "nu": [
+    "mu",
+    "no"
+  ],
+  "of": [
+    "if",
+    "oh",
+    "on",
+    "or",
+    "ox"
+  ],
+  "oh": [
+    "ah",
+    "of",
+    "on",
+    "or",
+    "ox"
+  ],
+  "on": [
+    "an",
+    "en",
+    "in",
+    "of",
+    "oh",
+    "or",
+    "ox"
+  ],
+  "or": [
+    "of",
+    "oh",
+    "on",
+    "ox"
+  ],
+  "ox": [
+    "ax",
+    "ex",
+    "of",
+    "oh",
+    "on",
+    "or"
+  ],
+  "pi": [
+    "hi"
+  ],
+  "re": [
+    "be",
+    "he",
+    "me",
+    "we"
+  ],
+  "so": [
+    "do",
+    "go",
+    "no",
+    "to"
+  ],
+  "to": [
+    "do",
+    "go",
+    "no",
+    "so"
+  ],
+  "up": [
+    "us"
+  ],
+  "us": [
+    "as",
+    "is",
+    "up"
+  ],
+  "we": [
+    "be",
+    "he",
+    "me",
+    "re"
+  ]
+}

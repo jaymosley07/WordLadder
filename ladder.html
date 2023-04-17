@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Ladder</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 100vh;
+          background-color: #f5f5f5;
+        }
+
+        .container {
+          background-color: white;
+          border-radius: 10px;
+          padding: 30px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          width: 100%;
+          max-width: 600px;
+        }
+
+        input[type="text"] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          box-sizing: border-box;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+
+        button {
+          background-color: #4CAF50;
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          border-radius: 4px;
+        }
+
+        ul {
+          list-style-type: none;
+          padding: 0;
+        }
+
+        li {
+          padding: 8px 16px;
+          border: 1px solid #ccc;
+          margin-bottom: -1px;
+          border-radius: 4px;
+        }
+
+        @media (min-width: 768px) {
+          .container {
+            width: 60%;
+          }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Word Ladder</h1>
+        <input type="text" id="startWord" placeholder="Enter the first word">
+        <input type="text" id="finalWord" placeholder="Enter the final word">
+        <button id="solveBtn">Solve</button>
+        <ul id="resultList"></ul>
+    </div>
+
+    <script>
+        async function fetchJson(wordLength) {
+          const response = await fetch(`placeholder`);
+          return await response.json();
+        }
+
+        async function loadNeighbors(wordLength) {
+          const jsonData = await fetchJson(wordLength);
+          const outputMapping = {};
+
+          for (const [key, nlist] of Object.entries(jsonData)) {
+            outputMapping[key] = new Set(nlist);
+          }
+          return outputMapping;
+        }
+
+        async function makeLadder(w1, w2) {
+          const wordLength = w1.length;
+          const neighbors = await loadNeighbors(wordLength);
+          const seen = new Set();
+          const potentials = [];
+          potentials.push([w1, [w1]]);
+
+          while (potentials.length) {
+            const [word, trace] = potentials.shift();
+
+            if (seen.has(word)) continue;
+
+            seen.add(word);
+
+            if (neighbors[word].has(w2)) {
+              return [...trace, w2];
+            }
+
+            for (const neighbor of neighbors[word]) {
+              potentials.push([neighbor, [...trace, neighbor]]);
+            }
+          }
+
+          return 'No solution found';
+        }
+
+        document.getElementById('solveBtn').addEventListener('click', async () => {
+          const startWord = document.getElementById('startWord').value.toLowerCase();
+          const finalWord = document.getElementById('finalWord').value.toLowerCase();
+
+          const result = await makeLadder(startWord, finalWord);
+
+          const resultList = document.getElementById('resultList');
+          resultList.innerHTML = '';
+
+          if (Array.isArray(result)) {
+            result.forEach(word => {
+              const listItem = document.createElement('li');
+              listItem.textContent = word;
+              resultList.appendChild(listItem);
+            });
+          } else {
+            const listItem = document.createElement('li');
+            listItem.textContent = result;
+            resultList.appendChild(listItem);
+          }
+        });
+
+
+    </script>
+</body>
+</html>
